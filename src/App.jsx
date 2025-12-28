@@ -1,15 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-      <div className="container mt-5">
-      <h1 className="text-primary">hello world!!!</h1>
-      <button className="btn btn-success">Click me</button>
-    </div>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
