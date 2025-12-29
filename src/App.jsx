@@ -2,6 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+
+
 import {
   Routes,
   Route,
@@ -10,8 +13,9 @@ import {
 function App() {
   return (
     <>
-      <Routes>
+      <Routes>     
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login  />} />
       </Routes>
     </>
   );
