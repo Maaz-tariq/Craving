@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" style={{backgroundClip:"rgba(212, 249, 237, 1)"}}>
       <div className="container-fluid">
         <Link
           className="navbar-brand fs-1 fw-bold fst-italic"
@@ -23,7 +23,7 @@ export default function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form
+          {/* <form
             className="d-flex mx-auto w-50"
           >
             <input
@@ -37,7 +37,7 @@ export default function Navbar() {
             >
               Search
             </button>
-          </form>
+          </form> */}
 
           <Link
             className="nav-link me-3 bg-success text-white"
@@ -49,6 +49,7 @@ export default function Navbar() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              marginLeft:"50px"
             }}
             to="/home"
           >
