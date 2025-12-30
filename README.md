@@ -15,4 +15,5 @@
 - Day 1: Project setup
 - Day 2: Frontend (Navbar)
 - Day 3: Routing and Frontend (Body) 
+- Day 4: More frontend (was going to work on DB, but was having installation problem)
 
