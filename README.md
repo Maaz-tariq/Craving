@@ -17,4 +17,5 @@
 - Day 3: Routing and Frontend (Body) 
 - Day 4: More frontend (was going to work on DB, but was having installation problem)
 
-- Day 5: No progress😞, MongoDB path errors
+- Day 5: MongoDB glitched😞
+- Day 6: Set up'ed MongoDB 😊
