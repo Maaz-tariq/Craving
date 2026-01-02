@@ -19,3 +19,4 @@
 
 - Day 5: MongoDB glitched😞
 - Day 6: Set up'ed MongoDB 😊
+- Day 7: Backend (expree + database)
