@@ -19,4 +19,5 @@
 
 - Day 5: MongoDB glitched😞
 - Day 6: Set up'ed MongoDB 😊
-- Day 7: Backend (expree + database)
+- Day 7: Backend (express + database)
+- Day 8: Connected backend with DB, performed Read opweartion
