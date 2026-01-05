@@ -19,4 +19,6 @@
 
 - Day 5: MongoDB glitched😞
 - Day 6: Set up'ed MongoDB 😊
-- Day 7: Backend (expree + database)
+- Day 7: Backend (express + database)
+- Day 8: Backend (DB and express was not able to work in sync, user coll was created but data was never added, compass crashed)
+- Day 9: Connected express with DB through mongoose

@@ -10,7 +10,7 @@ export default function Carousel() {
       className="carousel slide position-relative"
       data-bs-ride="carousel"
     >
-      {/* SEARCH BAR */}
+
       <div
         className="position-absolute start-50 translate-middle-x w-75"
         style={{ top: "20%", zIndex: 10 }}
@@ -25,7 +25,7 @@ export default function Carousel() {
         </form>
       </div>
 
-      {/* IMAGES */}
+
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
@@ -50,7 +50,7 @@ export default function Carousel() {
         </div>
       </div>
 
-      {/* CONTROLS */}
+
       <button className="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" />
       </button>
