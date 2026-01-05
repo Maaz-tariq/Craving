@@ -23,7 +23,7 @@ export default function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          {/* <form
+          <form
             className="d-flex mx-auto w-50"
           >
             <input
@@ -37,7 +37,7 @@ export default function Navbar() {
             >
               Search
             </button>
-          </form> */}
+          </form>
 
           <Link
             className="nav-link me-3 bg-success text-white"
@@ -70,6 +70,22 @@ export default function Navbar() {
           to="/login"
         >
           Login
+        </Link>
+
+                <Link
+          className="nav-link me-3 bg-success text-white"
+          style={{
+            marginLeft: " 20px",
+            width: "72.6px",
+            height: "37.6px",
+            borderRadius: "7px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          to="/signup"
+        >
+          Signup
         </Link>
       </div>
     </nav>

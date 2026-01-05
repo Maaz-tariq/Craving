@@ -11,7 +11,7 @@ export default function Carousel() {
       data-bs-ride="carousel"
     >
 
-      <div
+      {/* <div
         className="position-absolute start-50 translate-middle-x w-75"
         style={{ top: "20%", zIndex: 10 }}
       >
@@ -23,7 +23,7 @@ export default function Carousel() {
           />
           <button className="btn btn-success">Search</button>
         </form>
-      </div>
+      </div> */}
 
 
       <div className="carousel-inner">
