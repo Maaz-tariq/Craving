@@ -25,7 +25,7 @@ export default function Signup() {
  
     if(!json.success) {
       alert("Invalid credentials");
-    }
+    } 
 
   }
 

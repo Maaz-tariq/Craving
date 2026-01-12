@@ -7,13 +7,6 @@ const mongoDBconnect = async () => {
   try {
     await mongoose.connect(mongoURI);
     console.log("MongoDB connected successfully");
-
-    const collection = mongoose.connection.db.collection("food_items");
-
-    const data = await collection.find({}).toArray();
-    console.log("Fetched food items:", data.length);
-    console.log();
-
   } catch (error) {
     console.error("MongoDB connection error:", error.message);
     process.exit(1);
@@ -21,6 +14,3 @@ const mongoDBconnect = async () => {
 };
 
 module.exports = mongoDBconnect;
-
-
-

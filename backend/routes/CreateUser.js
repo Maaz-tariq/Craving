@@ -1,24 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-// const User = require('../models/User');
-
-// router.post('/createuser', async (req, res) => {
-//   try {
-//     await User.create({
-//       name: req.body.name,
-//       password: req.body.password,
-//       email: req.body.email,
-//       location: req.body.geolocation
-//     });
-
-//     res.json({ success: true });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ success: false });
-//   }
-// });
-
-
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
@@ -74,6 +53,7 @@ router.post('/loginuser', async (req, res) => {
   try {
     const { email, password } = req.body;
 
+    // 1️⃣ Validate input
     if (!email || !password) {
       return res.status(400).json({
         success: false,
@@ -81,6 +61,7 @@ router.post('/loginuser', async (req, res) => {
       });
     }
 
+    // 2️⃣ Find user
     const userData = await User.findOne({ email });
     if (!userData) {
       return res.status(401).json({
@@ -89,6 +70,7 @@ router.post('/loginuser', async (req, res) => {
       });
     }
 
+    // 3️⃣ Compare password
     const isMatch = await bcrypt.compare(password, userData.password);
     if (!isMatch) {
       return res.status(401).json({
@@ -97,25 +79,26 @@ router.post('/loginuser', async (req, res) => {
       });
     }
 
+    // 4️⃣ Create JWT payload
     const data = {
       user: {
         id: userData.id
       }
     };
 
+    // 5️⃣ Sign JWT
     const token = jwt.sign(
       data,
       process.env.JWT_SECRET || "mySuperSecretKey",
       { expiresIn: "1h" }
     );
 
-
+    // 6️⃣ Send response
     res.json({
       success: true,
       token
     });
 
-    
   } catch (error) {
     console.error("Login Error:", error);
     res.status(500).json({
@@ -125,7 +108,6 @@ router.post('/loginuser', async (req, res) => {
   }
 });
 
- 
 
 module.exports = router;
-    
+
