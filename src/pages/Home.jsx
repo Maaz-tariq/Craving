@@ -8,11 +8,9 @@ import BG2 from "../Images/bg2.jpeg";
 import BG3 from "../Images/bg3.jpeg";
 
 export default function Home() {
-
-
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
-
+  const [search, setSearch] = useState("");
 
   const loadData = async () => {
     try {
@@ -28,55 +26,58 @@ export default function Home() {
     }
   };
 
-
-
   useEffect(() => {
     loadData();
   }, []);
 
-
-
   return (
     <>
-      <Navbar /> 
+      <Navbar search={search} setSearch={setSearch} />
       <div>
-                <div
-            id="carouselExample"
-            className="carousel slide position-relative"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src={BG1}
-                  className="d-block w-100"
-                  style={{ height: "450px", objectFit: "cover" }}
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={BG2}
-                  className="d-block w-100"
-                  style={{ height: "450px", objectFit: "cover" }}
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={BG3}
-                  className="d-block w-100"
-                  style={{ height: "450px", objectFit: "cover" }}
-                />
-              </div>
+        <div
+          id="carouselExample"
+          className="carousel slide position-relative"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img
+                src={BG1}
+                className="d-block w-100"
+                style={{ height: "450px", objectFit: "cover" }}
+              />
             </div>
-      
-      
-            <button className="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span className="carousel-control-prev-icon" />
-            </button>
-            <button className="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span className="carousel-control-next-icon" />
-            </button>
-          </div> 
+            <div className="carousel-item">
+              <img
+                src={BG2}
+                className="d-block w-100"
+                style={{ height: "450px", objectFit: "cover" }}
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src={BG3}
+                className="d-block w-100"
+                style={{ height: "450px", objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <button
+            className="carousel-control-prev"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" />
+          </button>
+          <button
+            className="carousel-control-next"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" />
+          </button>
+        </div>
       </div>
 
       <div className="container">
@@ -89,7 +90,11 @@ export default function Home() {
                 {" "}
                 {foodItem.length > 0 ? (
                   foodItem
-                    .filter((item) => item.CategoryName === cat.CategoryName)
+                    .filter(
+                      (item) =>
+                        item.CategoryName === cat.CategoryName &&
+                        item.name.toLowerCase().includes(search.toLowerCase())
+                    )
                     .map((item) => (
                       <div key={item._id} className="col-12 col-md-6 col-lg-3">
                         <Card
