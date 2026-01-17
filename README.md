@@ -26,3 +26,4 @@
 =======
 - Day 8: Connected backend with DB, performed 
 - Day 9: Navbar logic
+- Day 10: Making Cart functionality 
