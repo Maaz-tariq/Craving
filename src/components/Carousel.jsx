@@ -10,22 +10,6 @@ export default function Carousel() {
       className="carousel slide position-relative"
       data-bs-ride="carousel"
     >
-
-      {/* <div
-        className="position-absolute start-50 translate-middle-x w-75"
-        style={{ top: "20%", zIndex: 10 }}
-      >
-        <form className="d-flex bg-white p-2 rounded shadow">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search food..."
-          />
-          <button className="btn btn-success">Search</button>
-        </form>
-      </div> */}
-
-
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
