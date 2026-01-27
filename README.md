@@ -176,22 +176,24 @@ These exclusions are **intentional** to keep the project focused on fundamentals
 
 ## 📂 Project Structure
 
+```text
 kraving/
 ├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── db.js
-│ └── index.js
+│   ├── models/
+│   ├── routes/
+│   ├── db.js
+│   └── index.js
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ └── package.json
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
 │
 └── README.md
+
 
 
 ### 🔄 Application Flow
