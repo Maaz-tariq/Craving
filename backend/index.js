@@ -1,7 +1,7 @@
 const express = require('express');
 console.log("🔥 index.js loaded")
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 const mongoDBconnect = require('./db');
 const cors = require('cors');
 
