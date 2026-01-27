@@ -1,4 +1,5 @@
 const express = require('express');
+console.log("🔥 index.js loaded")
 const app = express();
 const port = 5000;
 const mongoDBconnect = require('./db');
@@ -8,11 +9,6 @@ mongoDBconnect();
 
 app.use(express.json());
 
-// app.use(cors({
-//   origin: 'http://localhost:5173',
-//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//   allowedHeaders: ['Content-Type', 'Authorization']
-// }));
 app.use(cors());
 
 
@@ -25,6 +21,9 @@ app.use('/api', require('./routes/CreateUser'));
 
 app.use('/api', require('./routes/DisplayData'));
 
+app.use('/api', require('./routes/OrderData'));
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+ 

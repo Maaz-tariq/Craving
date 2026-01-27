@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 
 import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
+import MyOrder from "./pages/MyOrder";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/myOrder" element={<MyOrder />} />
         </Routes>
       </CartProvider>
     </>
