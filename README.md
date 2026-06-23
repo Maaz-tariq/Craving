@@ -179,23 +179,6 @@ These exclusions are **intentional** to keep the project focused on fundamentals
 
 ## 📂 Project Structure
 
-<<<<<<< HEAD
-kraving/
-├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── db.js
-│ └── index.js
-│
-├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ └── package.json
-│
-└── README.md
 =======
 ```text
 kraving/
