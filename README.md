@@ -75,7 +75,6 @@ This makes the project suitable for:
 
 ### 💳 Checkout (Prototype)
 - Orders stored in MongoDB
->>>>>>> 0e5ab90d75483c8fb6d97c70e785bebdcca3b4a1
 - Cart cleared after checkout
 - No payment gateway (intentional)
 
@@ -134,9 +133,6 @@ kraving/
 └── README.md
 ```
 
->>>>>>> 0e5ab90d75483c8fb6d97c70e785bebdcca3b4a1
-
-
 ### 🔄 Application Flow
 
 - User registers → data stored in MongoDB
@@ -163,4 +159,3 @@ Kraving is built to understand how real web applications work, not to be perfect
 If you understand this project, you understand the core concepts of MERN development.
 
 ⭐ If you find this project helpful, feel free to star the repository.
->>>>>>> 0e5ab90d75483c8fb6d97c70e785bebdcca3b4a1
